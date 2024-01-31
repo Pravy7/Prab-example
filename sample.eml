@@ -1,0 +1,193 @@
+Delivered-To: prabjotsingh1@gmail.com
+Received: by 2002:adf:f2ca:0:b0:336:ea4f:5656 with SMTP id d10csp1484611wrp;
+        Tue, 30 Jan 2024 06:50:15 -0800 (PST)
+X-Received: by 2002:a05:6a20:8883:b0:19c:841b:35d2 with SMTP id d3-20020a056a20888300b0019c841b35d2mr4229257pzf.38.1706626215363;
+        Tue, 30 Jan 2024 06:50:15 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706626215; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Deax9UKDwSEWKNcber1Ai6SfmxRklvEzvZnmPRGD8r1nyNKOia/bmaCudlbmEYwYOu
+         GzEu20q848hfNmjwKLglNgAfNcol4z8xQrKAc5C6YCt4ZLcjv8Hr1P7Niw4436iHZWk8
+         fkgxmI6/3U0w8zAL4i7/FfkDEY6x2ZPiZxDJPn4gp7laPTaCxoHF19xr2lvv8mjsx4ZT
+         JtYH3K4rq3yKkZRQVuqT2dOnB7hJuWd1kZSMoKmpbzkDe4tPIUYlCPMQqfka0G4WvTXz
+         uOMd6fl8d7OQsSR3hL80oSt9bB8FT44jkXWFyFQCCTFZKQQp+BdzdHOqs4eIcgBZpk+U
+         2Stg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:mime-version:subject:from:cc:to:message-id:dkim-signature;
+        bh=je2231DAQzOJuy6LGvjIvHZ3iHoEQryLhPQ0OCzoEhc=;
+        fh=UwnAMSBgjv0IS3UdZjEnqpoL+sPdNGsbe++dWHuO22s=;
+        b=mLgeSHKjHUePXZXkv4VqG7Cjvp8Yux1VsyO6FH1sac+bXPgfelqWdde+SfAlP/ut6+
+         IO26aPD5eXdnWlboXa53Mh7GVahgLfLBOII4/kY4VLMTJ0xSXsUql4YsPwuh6+aqvrba
+         UIImS+SYem0oKWiFXqQzPuYaj3Y8MFwXBwLcZXq6HM7VyUJ0qP3EQxJYGtV6cZecQqPu
+         iRcjJ5AHK//NG6BEyaEQ6IXNooG4OTXtVjD2e4xsaCWmuXhAbeK9WHAtSiJtd/FQQz0M
+         YItegKMvDH6AXaSYEB84jtOrmN3xz6517/btpOh7FdgiGaazi9efNtX38gWYKg0fPekC
+         awBg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=EtCoZaZv;
+       spf=pass (google.com: domain of digitalpoonam21@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=digitalpoonam21@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+X-Forwarded-Encrypted: i=0; AJvYcCXB2G4fDFvWeF6/wA6UKfX3TcaquNPwLKuIB9pZhDYwrhhOrTJQYS+QWOPIEkWgolkpLnxmnyu0lAayU/FBq1bLiQMkqmZlow==
+Return-Path: <digitalpoonam21@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id o137-20020a62cd8f000000b006ddc05855a7sor2681361pfg.1.2024.01.30.06.50.15
+        for <prabjotsingh1@gmail.com>
+        (Google Transport Security);
+        Tue, 30 Jan 2024 06:50:15 -0800 (PST)
+Received-SPF: pass (google.com: domain of digitalpoonam21@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=EtCoZaZv;
+       spf=pass (google.com: domain of digitalpoonam21@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=digitalpoonam21@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706626215; x=1707231015; dara=google.com;
+        h=date:mime-version:subject:from:cc:to:message-id:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=je2231DAQzOJuy6LGvjIvHZ3iHoEQryLhPQ0OCzoEhc=;
+        b=EtCoZaZvFSYtG2hKfieQNC2KqPIfVmXHeXnE6ROqdjcZo0mFWFYN9gbTbWfLx67FjU
+         1COqZ1zKFGI7qhiLdM9WFbVbnLGmK/kk7aJ2oPhmulUXyphDHAKYLeRwlP1TVGNohPqr
+         IGc93tBgS1sw2z065GFJQYfjtBpe71qc3ieTtL1ya7dh+FRMH+JkvZ811U8GbwZDFNK3
+         BqNQVEJYBsLvUSLCsvbmGAVQDs83sdtuSLIZrZ02rHGeSSMm2VbqOXuIU18m7qKOUWZW
+         ouYEgwi40x9X+7P02nQU+3wpA7t8krREO1ODTCQ9EOTKVmKgb7X20kXLbtFCEqXE2ym5
+         UbxQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706626215; x=1707231015;
+        h=date:mime-version:subject:from:cc:to:message-id:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=je2231DAQzOJuy6LGvjIvHZ3iHoEQryLhPQ0OCzoEhc=;
+        b=oLL13o2nRbPMcSl852UxtTKuRbJBLq5L88G8sDotmMlf0wjGUX7xLLBWAHC/rU/qMR
+         XXZZ4zib7ygTztq++nSSkIE6v0WJBd2OIMdq+Ytd8bPhqikKb753G3yZG3H2ibipKynM
+         Qv9TL2p/AteJJbjLTB0HciU7TXZD5Px3Y1JprdqEPHVf2xJGpYt+PxlGTAye2UlTz9fl
+         mndk9x5FX2/bVE9fVcxtWbJ4KcyGb+BHQ3fJvlzbqmrErjUEtyPHlIoXuppHamyWi0IS
+         1rRqRQX6QfbVawoNOb9ocETCwfOgvGW5NzltHYqTi1eAKNXXJAbSm0aMprdop4TqG6fq
+         fLBA==
+X-Gm-Message-State: AOJu0YyAp6OBDJ5mHW+ML3C+Vly9n1HlzIR87KoybQ33x4fYCT1klh5T
+	QXf1qi2vF0e+B6x3S0P6LcuO0dTnXCy74c3V1X3nYlX39r1A8LxnyDmEIV8V6stXcQa5w1DWRBX
+	/1LP69BIRgwggrkFKboUsEF4wGm4=
+X-Google-Smtp-Source: AGHT+IE2qBr/eU0i0Txq/3thZJSU3IG7kKiVSsVWqgR5fkAIjapHNhpLq51baZG4I1zaG7z6C9Vujb9PC9XhbaJgVus=
+X-Received: by 2002:a05:6a20:8883:b0:19c:841b:35d2 with SMTP id d3-20020a056a20888300b0019c841b35d2mr4229190pzf.38.1706626213712;
+        Tue, 30 Jan 2024 06:50:13 -0800 (PST)
+Message-ID: <CAF9QCCurz90M4Th4KZckPQ2f1vX9NufvGgO1MHbjsJQYGQRhGA@mail.gmail.com>
+To: Snehal Gandhi <snehal.gandhi14@gmail.com>, sneha agrawal <agrawal.sneha6268@gmail.com>, 
+	Ritu Zawar <ritu.zawar79@gmail.com>, Ashishbhutani2409@gmail.com, 
+	monusonu5151@gmail.com, manshukatariya04@gmail.com, kuldeepmghwl1@gmail.com, 
+	sonam Gandhi <soniks.2007@gmail.com>, Poojavagrawal007@gmail.com, 
+	rituvarshney76@gmail.com, jsfulwani9@gmail.com, shreyajain427@gmail.com, 
+	Shwetagupta.aol@gmail.com, ANU MUNDHRA <anumundhra04@gmail.com>, dagaamruta95@gmail.com, 
+	namitabbajoria@gmail.com, Moumita Dhiran <moumitadhiran@gmail.com>, 
+	Ruchi Agrawal <ruchibcmdgr34@gmail.com>, ANKIT MITTAL <amittal0891@gmail.com>, 
+	Ankita Bansal <ankitabansal2403@gmail.com>, Chitrakshiagrawal64@gmail.com, 
+	theloficafe03@gmail.com, dudrishi@gmail.com, 
+	jyoti verma <jyoti.verma.mba1@gmail.com>, Prabjot Singh <prabjotsingh1@gmail.com>, 
+	babli.ag17@gmail.com, Amrinder Singh <amrinder1224@gmail.com>, 
+	shailendra agrawal <Shailendra3107@gmail.com>, bhaktid4@gmail.com, 
+	Simranpreet Kaur <Simranpreet6590@gmail.com>, dr.shalu1306@gmail.com, 
+	Ankita gutgutia <ankitagutgutia@gmail.com>, Kamal Pugalia <kml.pugalia@gmail.com>, 
+	shrijieventsndecor@gmail.com, Ravi Agrawal <aagrawalrs36@gmail.com>, 
+	barkha agrawal <barkha29agrawal04@gmail.com>, Nikita Arya <nikita.arya.1993@gmail.com>, 
+	Gagan Purohit <gaganpurohit7@gmail.com>, Joydip Halder <joydiphalder6666666@gmail.com>, 
+	pptamanna3@gmail.com, poonamcharlewae@gmail.com, 
+	Nupur Agrawal <agrawalnupur0708@gmail.com>, digitalanisha27@gmail.com, 
+	mtshah301075@gmail.com, Aditi Baijal <aditi.baijal91@gmail.com>, 
+	daschandrani399@gmail.com, Shailajaa sharma <Shailajaasharma10@gmail.com>, 
+	shilpa.devanshi@gmail.com, Nisha Rathi <nisharathi0104@gmail.com>, 
+	rashmi.mohota@gmail.com, Manisha Gupta <Manishagupta140881@gmail.com>, 
+	ruchikumar90@gmail.com, Vinita Somani <Vinitasomani19@gmail.com>, thepranify@gmail.com, 
+	Aarti Parate <aarti.parate1984@gmail.com>, Shrutianurag1@gmail.com, 
+	shalu bindal <Shalucusp@gmail.com>, tawri123esha@gmail.com, 
+	Shruti Mundada <mundadashrutiv@gmail.com>, Sheetal Kabra <sheetalkabra9@gmail.com>, 
+	Roli Mishra <rolimishra.90@gmail.com>, Varsha Jain <Varsha.cwa@gmail.com>, 
+	Puja Maskara <Pujamaskara92@gmail.com>, Nikita Tharani <nikita.tharani27@gmail.com>, 
+	rpmbrandpartner222@gmail.com, aanchalagrawal616@gmail.com, 
+	kanchanmalu1982@gmail.com, tanishaagrawal2105@gmail.com, 
+	Taman Preet <tamanpreet8288@gmail.com>, agarwalruchi252@gmail.com, 
+	Shilpa.bnema@gmail.com, Yaachi Karnawat <Karnawatyaachi@gmail.com>, 
+	Shreeramdeocolours@gmail.com, Gaurii Arora <aroragaurii05@gmail.com>, 
+	yogesh bari <ajybari@gmail.com>, Priya.gaulkar2014@gmail.com, sushama@busauto.com, 
+	Megha Jogani <loreejogani@gmail.com>, anupam0708@gmail.com, 
+	Navjot Kaur <navjotkaur8713830@gmail.com>, nidhianujagr@gmail.com, 
+	nohar_sahucg@yahoo.co.in, anithakanuga@gmail.com, bhupendra@bni-india.in, 
+	surajkbj@gmail.com, Khyati Jain <khyatijain432@gmail.com>, Prajaktaaitulwar@gmail.com, 
+	Kirti Bhojnagarwala <kirtibnw@gmail.com>, divyansht290@gmail.com, 
+	Atula Jajodia <atula1712@gmail.com>
+Cc: 
+From: Poonam Mantri <digitalpoonam21@gmail.com>
+Subject: The Core Of Marketing
+MIME-Version: 1.0
+Date: Tue, 30 Jan 2024 20:19:51 +0530
+Content-Type: multipart/alternative; boundary="u84kydxucgr4hj6oh9l5ect1cd5c"
+X-Gm-Locker: AJ05Yhf7yGpkqlxywwMWfIdHZI7XIFH8a8JMf16422OG9L1-wj1aUA2L3bliAT5hRtBs4mgXzVe6w-K3OKh7cX1T4X6eBXvAkQ7fK2qJLmiZd2mYulRUGSe9-43tlL6P-0vMoQ==
+
+--u84kydxucgr4hj6oh9l5ect1cd5c
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+ClBvb25hbSBNYW50cmkgaGFzIHNlbnQgeW91IGFuIGVtYWlsIHZpYSBHbWFpbCBjb25maWRlbnRp
+YWwgbW9kZToKCltpbWFnZTogR21haWwgbG9nb11UaGUgQ29yZSBPZiBNYXJrZXRpbmcgPGh0dHBz
+Oi8vY29uZmlkZW50aWFsLW1haWwuZ29vZ2xlLmNvbS9tc2cvQUowNVloZjd5R3BrcWx4eXd3TVdm
+SWRIWkk3WElGSDhhOEpNZjE2NDIyT0c5TDEtd2oxYVVBMkwzYmxpQVQ1aFJ0QnM0bWdYelZlNnct
+SzNPS2g3Y1gxVDRYNmVCWHZBa1E3ZksycUpMbWlaZDJtWXVsUlVHU2U5LTQzdGxMNlAtMHZNb1E9
+PT4KClRoaXMgbWVzc2FnZSB3YXMgc2VudCBvbiBKYW4gMzAsIDIwMjQgYXQgNjo1MDoxM+KAr0FN
+IFBTVApZb3UgY2FuIG9wZW4gaXQgYnkgY2xpY2tpbmcgdGhlIGxpbmsgYmVsb3cuIFRoaXMgbGlu
+ayB3aWxsIG9ubHkgd29yayBmb3IgcHJhYmpvdHNpbmdoMUBnbWFpbC5jb20uCgpWaWV3IHRoZSBl
+bWFpbCA8aHR0cHM6Ly9jb25maWRlbnRpYWwtbWFpbC5nb29nbGUuY29tL21zZy9BSjA1WWhmN3lH
+cGtxbHh5d3dNV2ZJZEhaSTdYSUZIOGE4Sk1mMTY0MjJPRzlMMS13ajFhVUEyTDNibGlBVDVoUnRC
+czRtZ1h6VmU2dy1LM09LaDdjWDFUNFg2ZUJYdkFrUTdmSzJxSkxtaVpkMm1ZdWxSVUdTZTktNDN0
+bEw2UC0wdk1vUT09PgoKR21haWwgY29uZmlkZW50aWFsIG1vZGUgZ2l2ZXMgeW91IG1vcmUgY29u
+dHJvbCBvdmVyIHRoZSBtZXNzYWdlcyB5b3Ugc2VuZC4gVGhlIHNlbmRlciBtYXkgaGF2ZSBjaG9z
+ZW4gdG8gc2V0IGFuIGV4cGlyYXRpb24gdGltZSwgZGlzYWJsZSBwcmludGluZyBvciBmb3J3YXJk
+aW5nLCBvciB0cmFjayBhY2Nlc3MgdG8gdGhpcyBtZXNzYWdlLiBMZWFybiBtb3JlIDxodHRwczov
+L3N1cHBvcnQuZ29vZ2xlLmNvbS9tYWlsL2Fuc3dlci83Njc0MDU5PgpHbWFpbDogRW1haWwgYnkg
+R29vZ2xlClVzZSBpcyBzdWJqZWN0IHRvIHRoZSBHb29nbGUgUHJpdmFjeSBQb2xpY3kgPGh0dHBz
+Oi8vbXlhY2NvdW50Lmdvb2dsZS5jb20vcHJpdmFjeXBvbGljeT9obD1lbj4KR29vZ2xlIExMQywg
+MTYwMCBBbXBoaXRoZWF0cmUgUGFya3dheSwgTW91bnRhaW4gVmlldywgQ0EgOTQwNDMsIFVTQQpZ
+b3UgaGF2ZSByZWNlaXZlZCB0aGlzIG1lc3NhZ2UgYmVjYXVzZSBzb21lb25lIHNlbnQgeW91IGFu
+IGVtYWlsIHZpYSBHbWFpbCBjb25maWRlbnRpYWwgbW9kZS4KW2ltYWdlOiBHb29nbGUgbG9nb10K
+--u84kydxucgr4hj6oh9l5ect1cd5c
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head></head><body><div style=3D"width: 100%; padding: 24px 0 16px 0;=
+ background-color: #f5f5f5; text-align: center;"><div style=3D"display: inl=
+ine-block; width: 90%; max-width: 680px; min-width: 280px; text-align: left=
+; font-family: Roboto,Arial,Helvetica,sans-serif; font-size: 13px;" dir=3D"=
+ltr"><div style=3D"display: block; padding: 0 2px;"><div style=3D"display: =
+block; background: #fff; height: 2px;"></div></div><div style=3D"border-lef=
+t: 1px solid f0f0f0; border-right: 1px solid #f0f0f0; border-bottom: 1px so=
+lid #f0f0f0;"><div style=3D"padding: 24px 32px 24px 32px; background: #fff;=
+ border-right: 1px solid #eaeaea; border-left: 1px solid #eaeaea; border-bo=
+ttom: 1px solid #eaeaea;"><div>Poonam Mantri has sent you an email via <spa=
+n style=3D"font-weight: bold;">Gmail confidential mode:</span></div><br/><d=
+iv style=3D"display: table-row;"><img src=3D"https://www.gstatic.com/images=
+/branding/product/2x/gmail_16dp.png" border=3D"0" width=3D"32" style=3D"dis=
+play: table-cell; vertical-align: middle;" alt=3D"Gmail logo"/><a href=3D"h=
+ttps://confidential-mail.google.com/msg/AJ05Yhf7yGpkqlxywwMWfIdHZI7XIFH8a8J=
+Mf16422OG9L1-wj1aUA2L3bliAT5hRtBs4mgXzVe6w-K3OKh7cX1T4X6eBXvAkQ7fK2qJLmiZd2=
+mYulRUGSe9-43tlL6P-0vMoQ=3D=3D" target=3D"_blank" style=3D"display: table-c=
+ell; vertical-align: middle; padding-left: 12px; color: #3367d6; font-size:=
+ 18px; text-decoration: none;">The Core Of Marketing</a></div><br/><div>Thi=
+s message was sent on Jan 30, 2024 at 6:50:13=E2=80=AFAM PST</div><div>You =
+can open it by clicking the link below. This link will only work for prabjo=
+tsingh1@gmail.com.</div><br/><a href=3D"https://confidential-mail.google.co=
+m/msg/AJ05Yhf7yGpkqlxywwMWfIdHZI7XIFH8a8JMf16422OG9L1-wj1aUA2L3bliAT5hRtBs4=
+mgXzVe6w-K3OKh7cX1T4X6eBXvAkQ7fK2qJLmiZd2mYulRUGSe9-43tlL6P-0vMoQ=3D=3D" ta=
+rget=3D"_blank" style=3D"background-color: #4d90fe; border: 1px solid #3079=
+ed; border-radius: 2px; color: white; display:inline-block; font-size: 11px=
+; font-weight: bold; height: 29px; line-height: 29px; min-width: 54px; outl=
+ine: 0; padding: 0 8px; text-align:center; text-decoration: none;">View the=
+ email</a><br/><br/><div>Gmail confidential mode gives you more control ove=
+r the messages you send. The sender may have chosen to set an expiration ti=
+me, disable printing or forwarding, or track access to this message. <a hre=
+f=3D"https://support.google.com/mail/answer/7674059" target=3D"_blank">Lear=
+n more</a></div></div></div><table style=3D"padding: 14px 10px 0 10px;" rol=
+e=3D"presentation"><tr><td style=3D"width: 100%; font-size: 11px; font-fami=
+ly: Roboto,Arial,Helvetica,sans-serf; color:#646464; line-height: 18px; min=
+-height: 40px; vertical-align: middle;"><div>Gmail: Email by Google</div><d=
+iv>Use is subject to the <a href=3D"https://myaccount.google.com/privacypol=
+icy?hl=3Den" target=3D"_blank">Google Privacy Policy</a></div><div>Google L=
+LC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA</div><div>You h=
+ave received this message because someone sent you an email via Gmail confi=
+dential mode.</div></td><td><img src=3D"https://www.gstatic.com/images/bran=
+ding/googlelogo/2x/googlelogo_tm_black54_color_96x40dp.png" width=3D"96" bo=
+rder=3D"0" alt=3D"Google logo"/></td></tr></table></div></div></body></html=
+>
+--u84kydxucgr4hj6oh9l5ect1cd5c--
